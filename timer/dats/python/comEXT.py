@@ -7,10 +7,13 @@ class Com:
 	
 	def Parse_osc(self, **kwargs):
 		args = kwargs.get('args')
-		address = kwargs.get('address')[1:]
+		address = kwargs.get('address')
+		oscCommand = address.split('/')[-1]
+
 		try:
-			func = getattr(oscinActions, address)
+			func = getattr(oscinActions, oscCommand)
 			func(args)
-		except:
-			pass
+		except Exception as e:
+			print("This address is not yet mapped")
+			print(e)
 		pass
