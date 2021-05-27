@@ -4,6 +4,10 @@ class Com:
 	def __init__(self, my_op):
 		self.My_op = my_op
 		print(f"Com init from {my_op}")
+
+	def Send_timer_update(self):
+		current_time = op.output.Get_current_timer_count()
+		# print(current_time)
 	
 	def Parse_osc(self, **kwargs):
 		args = kwargs.get('args')
