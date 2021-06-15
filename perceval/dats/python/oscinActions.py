@@ -13,3 +13,6 @@ def toggle_glitch(args):
 
 def set_glitch(args):
 	ipar.Settings.Glitch = args[0]
+
+def toggle_room_accident(args):
+	ipar.Settings.Roomaccident = args[0]
