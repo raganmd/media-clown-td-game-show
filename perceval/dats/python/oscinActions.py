@@ -16,3 +16,12 @@ def set_glitch(args):
 
 def toggle_room_accident(args):
 	ipar.Settings.Roomaccident = args[0]
+
+def toggle_prerecord(args):
+	ipar.Settings.Prerecord = args[0]	
+
+def set_video_file(args):
+	cue_folder = ipar.Settings.Cuefolder.eval()
+	new_path = f'{cue_folder}/{args[0]}'
+	ipar.Settings.Prerecordfile = new_path
+	pass
