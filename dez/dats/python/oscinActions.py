@@ -13,3 +13,13 @@ def toggle_glitch(args):
 
 def set_glitch(args):
 	ipar.Settings.Glitch = args[0]
+
+
+def toggle_prerecord(args):
+	ipar.Settings.Prerecord = args[0]	
+
+def set_video_file(args):
+	cue_folder = ipar.Settings.Cuefolder.eval()
+	new_path = f'{cue_folder}/{args[0]}'
+	ipar.Settings.Prerecordfile = new_path
+	pass
