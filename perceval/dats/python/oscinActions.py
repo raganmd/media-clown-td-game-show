@@ -25,3 +25,16 @@ def set_video_file(args):
 	new_path = f'{cue_folder}/{args[0]}'
 	ipar.Settings.Prerecordfile = new_path
 	pass
+
+def toggle_override_output(args):
+	ipar.Settings.Toggleoutputoverride = args[0]
+
+def set_override_file(args):
+	path = f"{ipar.Settings.Cuefolder}/{args[0]}"
+	ipar.Settings.Overridefile = path
+
+def distort(args):
+	ipar.Settings.Lensdistortion = args[0]
+
+def set_background(args):
+	ipar.Settings.Background = args[0]
